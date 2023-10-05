@@ -32,12 +32,18 @@ public class sha {
     }
 
     private static String bytesToHex(byte[] b) {
+
         char hexDigit[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
         StringBuffer buf = new StringBuffer();
+
         for (byte aB : b) {
+
             buf.append(hexDigit[(aB >> 4) & 0x0f]);
             buf.append(hexDigit[aB & 0x0f]);
+
         }
+
         return buf.toString();
     }
 }
