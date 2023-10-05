@@ -25,7 +25,7 @@ class playfairCipher {
             char c = s.charAt(i);
             if (positions[c - 'A'] == null) {
                 charTable[k / 5][k % 5] = c;
-                positions[c - 'A'] = new Point(k % 5, k / 5);
+                ll
                 k++;
             }
         }
