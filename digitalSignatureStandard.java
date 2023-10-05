@@ -28,6 +28,8 @@ public class digitalSignatureStandard {
 
         System.out.println("Digital signature for given text: " + new String(signature, "UTF8"));
 
+        sc.close();
+
     }
 
 }
