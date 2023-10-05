@@ -2,17 +2,17 @@ class DiffieHellman {
     public static void main(String args[]) {
 
         int p = 23; // publicly known (prime number)
-        int g = 5; // publicly known (primitive root)
+        int q = 5; // publicly known (primitive root)
         int x = 4; // only Alice knows this secret
         int y = 3; // only Bob knows this secret
 
-        double aliceSends = (Math.pow(g, x)) % p;
-        double bobSends = (Math.pow(g, y)) % p;
+        double aliceSends = (Math.pow(q, x)) % p;
+        double bobSends = (Math.pow(q, y)) % p;
 
         double aliceComputes = (Math.pow(bobSends, x)) % p;
         double bobComputes = (Math.pow(aliceSends, y)) % p;
 
-        double sharedSecret = (Math.pow(g, (x * y))) % p;
+        double sharedSecret = (Math.pow(q, (x * y))) % p;
 
         System.out.println("Simulation of Diffie-Hellman key exchange algorithm\n");
 
